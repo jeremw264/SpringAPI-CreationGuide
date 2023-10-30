@@ -1,0 +1,31 @@
+spring:
+    cache:
+        type: simple
+        caffeine:
+            spec: maximumSize=100,expireAfterWrite=5m
+    application:
+        name: Api Exemple
+    datasource:
+        url: jdbc:postgresql://localhost:5432/test
+        username: postgres
+        password: ${DB_PASSWORD}
+    jpa:
+        show-sql: false
+        hibernate:
+            ddl-auto: create
+        properties:
+            hibernate:
+                format-sql: true
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+        database: postgresql
+    
+    
+
+logging:
+    level:
+        root: INFO
+
+server:
+    port: 3001
+    servlet:
+        context-path: /api/v1
