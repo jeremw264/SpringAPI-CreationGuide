@@ -19,5 +19,4 @@ public interface UserService {
     User updateUser(final UpdateUserForm updateUserForm) throws UserResourceException;
 
     void deleteUser(final Long userId) throws UserResourceException;
-
 }
